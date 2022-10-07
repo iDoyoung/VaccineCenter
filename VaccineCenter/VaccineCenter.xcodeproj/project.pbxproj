@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10228F044D20045C472 /* AppDelegate.swift */; };
+		7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10428F044D20045C472 /* SceneDelegate.swift */; };
+		7FB0F10728F044D20045C472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10628F044D20045C472 /* ViewController.swift */; };
+		7FB0F10C28F044D20045C472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB0F10B28F044D20045C472 /* Assets.xcassets */; };
+		7FB0F10F28F044D20045C472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB0F10D28F044D20045C472 /* LaunchScreen.storyboard */; };
+		7FB0F11A28F044D20045C472 /* VaccineCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F11928F044D20045C472 /* VaccineCenterTests.swift */; };
+		7FB0F12428F044D20045C472 /* VaccineCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F12328F044D20045C472 /* VaccineCenterUITests.swift */; };
+		7FB0F12628F044D20045C472 /* VaccineCenterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F12528F044D20045C472 /* VaccineCenterUITestsLaunchTests.swift */; };
+		7FB0F13B28F0492F0045C472 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F13A28F0492F0045C472 /* SnapKit-Dynamic */; };
+		7FB0F15028F04A0D0045C472 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F14F28F04A0D0045C472 /* RxCocoa */; };
+		7FB0F15228F04A0D0045C472 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F15128F04A0D0045C472 /* RxRelay */; };
+		7FB0F15428F04A0D0045C472 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F15328F04A0D0045C472 /* RxSwift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7FB0F11628F044D20045C472 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FB0F0F728F044D20045C472 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FB0F0FE28F044D20045C472;
+			remoteInfo = VaccineCenter;
+		};
+		7FB0F12028F044D20045C472 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7FB0F0F728F044D20045C472 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7FB0F0FE28F044D20045C472;
+			remoteInfo = VaccineCenter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7FB0F0FF28F044D20045C472 /* VaccineCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB0F10228F044D20045C472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7FB0F10428F044D20045C472 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7FB0F10628F044D20045C472 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7FB0F10B28F044D20045C472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7FB0F10E28F044D20045C472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7FB0F11028F044D20045C472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FB0F11528F044D20045C472 /* VaccineCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccineCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB0F11928F044D20045C472 /* VaccineCenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterTests.swift; sourceTree = "<group>"; };
+		7FB0F11F28F044D20045C472 /* VaccineCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccineCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB0F12328F044D20045C472 /* VaccineCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterUITests.swift; sourceTree = "<group>"; };
+		7FB0F12528F044D20045C472 /* VaccineCenterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7FB0F0FC28F044D20045C472 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB0F15228F04A0D0045C472 /* RxRelay in Frameworks */,
+				7FB0F15028F04A0D0045C472 /* RxCocoa in Frameworks */,
+				7FB0F15428F04A0D0045C472 /* RxSwift in Frameworks */,
+				7FB0F13B28F0492F0045C472 /* SnapKit-Dynamic in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB0F11228F044D20045C472 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB0F11C28F044D20045C472 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7FB0F0F628F044D20045C472 = {
+			isa = PBXGroup;
+			children = (
+				7FB0F10128F044D20045C472 /* VaccineCenter */,
+				7FB0F11828F044D20045C472 /* VaccineCenterTests */,
+				7FB0F12228F044D20045C472 /* VaccineCenterUITests */,
+				7FB0F10028F044D20045C472 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7FB0F10028F044D20045C472 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F0FF28F044D20045C472 /* VaccineCenter.app */,
+				7FB0F11528F044D20045C472 /* VaccineCenterTests.xctest */,
+				7FB0F11F28F044D20045C472 /* VaccineCenterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7FB0F10128F044D20045C472 /* VaccineCenter */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F13328F0454C0045C472 /* Sources */,
+				7FB0F13828F0459D0045C472 /* Resource */,
+				7FB0F13228F045440045C472 /* Supportings */,
+				7FB0F10628F044D20045C472 /* ViewController.swift */,
+			);
+			path = VaccineCenter;
+			sourceTree = "<group>";
+		};
+		7FB0F11828F044D20045C472 /* VaccineCenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F11928F044D20045C472 /* VaccineCenterTests.swift */,
+			);
+			path = VaccineCenterTests;
+			sourceTree = "<group>";
+		};
+		7FB0F12228F044D20045C472 /* VaccineCenterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F12328F044D20045C472 /* VaccineCenterUITests.swift */,
+				7FB0F12528F044D20045C472 /* VaccineCenterUITestsLaunchTests.swift */,
+			);
+			path = VaccineCenterUITests;
+			sourceTree = "<group>";
+		};
+		7FB0F13228F045440045C472 /* Supportings */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F10D28F044D20045C472 /* LaunchScreen.storyboard */,
+				7FB0F11028F044D20045C472 /* Info.plist */,
+			);
+			path = Supportings;
+			sourceTree = "<group>";
+		};
+		7FB0F13328F0454C0045C472 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F13428F045560045C472 /* Entry */,
+				7FB0F13728F0457D0045C472 /* Scene */,
+				7FB0F13628F0456A0045C472 /* Util */,
+				7FB0F13528F045630045C472 /* Service */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7FB0F13428F045560045C472 /* Entry */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F10228F044D20045C472 /* AppDelegate.swift */,
+				7FB0F10428F044D20045C472 /* SceneDelegate.swift */,
+			);
+			path = Entry;
+			sourceTree = "<group>";
+		};
+		7FB0F13528F045630045C472 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		7FB0F13628F0456A0045C472 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		7FB0F13728F0457D0045C472 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		7FB0F13828F0459D0045C472 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F10B28F044D20045C472 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7FB0F0FE28F044D20045C472 /* VaccineCenter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FB0F12928F044D20045C472 /* Build configuration list for PBXNativeTarget "VaccineCenter" */;
+			buildPhases = (
+				7FB0F0FB28F044D20045C472 /* Sources */,
+				7FB0F0FC28F044D20045C472 /* Frameworks */,
+				7FB0F0FD28F044D20045C472 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VaccineCenter;
+			packageProductDependencies = (
+				7FB0F13A28F0492F0045C472 /* SnapKit-Dynamic */,
+				7FB0F14F28F04A0D0045C472 /* RxCocoa */,
+				7FB0F15128F04A0D0045C472 /* RxRelay */,
+				7FB0F15328F04A0D0045C472 /* RxSwift */,
+			);
+			productName = VaccineCenter;
+			productReference = 7FB0F0FF28F044D20045C472 /* VaccineCenter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7FB0F11428F044D20045C472 /* VaccineCenterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FB0F12C28F044D20045C472 /* Build configuration list for PBXNativeTarget "VaccineCenterTests" */;
+			buildPhases = (
+				7FB0F11128F044D20045C472 /* Sources */,
+				7FB0F11228F044D20045C472 /* Frameworks */,
+				7FB0F11328F044D20045C472 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FB0F11728F044D20045C472 /* PBXTargetDependency */,
+			);
+			name = VaccineCenterTests;
+			productName = VaccineCenterTests;
+			productReference = 7FB0F11528F044D20045C472 /* VaccineCenterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7FB0F11E28F044D20045C472 /* VaccineCenterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FB0F12F28F044D20045C472 /* Build configuration list for PBXNativeTarget "VaccineCenterUITests" */;
+			buildPhases = (
+				7FB0F11B28F044D20045C472 /* Sources */,
+				7FB0F11C28F044D20045C472 /* Frameworks */,
+				7FB0F11D28F044D20045C472 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FB0F12128F044D20045C472 /* PBXTargetDependency */,
+			);
+			name = VaccineCenterUITests;
+			productName = VaccineCenterUITests;
+			productReference = 7FB0F11F28F044D20045C472 /* VaccineCenterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7FB0F0F728F044D20045C472 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					7FB0F0FE28F044D20045C472 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					7FB0F11428F044D20045C472 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7FB0F0FE28F044D20045C472;
+					};
+					7FB0F11E28F044D20045C472 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 7FB0F0FE28F044D20045C472;
+					};
+				};
+			};
+			buildConfigurationList = 7FB0F0FA28F044D20045C472 /* Build configuration list for PBXProject "VaccineCenter" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7FB0F0F628F044D20045C472;
+			packageReferences = (
+				7FB0F13928F0492F0045C472 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				7FB0F14E28F04A0D0045C472 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
+			productRefGroup = 7FB0F10028F044D20045C472 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7FB0F0FE28F044D20045C472 /* VaccineCenter */,
+				7FB0F11428F044D20045C472 /* VaccineCenterTests */,
+				7FB0F11E28F044D20045C472 /* VaccineCenterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7FB0F0FD28F044D20045C472 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB0F10F28F044D20045C472 /* LaunchScreen.storyboard in Resources */,
+				7FB0F10C28F044D20045C472 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB0F11328F044D20045C472 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB0F11D28F044D20045C472 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7FB0F0FB28F044D20045C472 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB0F10728F044D20045C472 /* ViewController.swift in Sources */,
+				7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */,
+				7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB0F11128F044D20045C472 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB0F11A28F044D20045C472 /* VaccineCenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FB0F11B28F044D20045C472 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FB0F12428F044D20045C472 /* VaccineCenterUITests.swift in Sources */,
+				7FB0F12628F044D20045C472 /* VaccineCenterUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7FB0F11728F044D20045C472 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FB0F0FE28F044D20045C472 /* VaccineCenter */;
+			targetProxy = 7FB0F11628F044D20045C472 /* PBXContainerItemProxy */;
+		};
+		7FB0F12128F044D20045C472 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7FB0F0FE28F044D20045C472 /* VaccineCenter */;
+			targetProxy = 7FB0F12028F044D20045C472 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7FB0F10D28F044D20045C472 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7FB0F10E28F044D20045C472 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7FB0F12728F044D20045C472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7FB0F12828F044D20045C472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7FB0F12A28F044D20045C472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VaccineCenter/Supportings/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ido.VaccineCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7FB0F12B28F044D20045C472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VaccineCenter/Supportings/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ido.VaccineCenter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7FB0F12D28F044D20045C472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ido.VaccineCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaccineCenter.app/VaccineCenter";
+			};
+			name = Debug;
+		};
+		7FB0F12E28F044D20045C472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ido.VaccineCenterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VaccineCenter.app/VaccineCenter";
+			};
+			name = Release;
+		};
+		7FB0F13028F044D20045C472 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ido.VaccineCenterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VaccineCenter;
+			};
+			name = Debug;
+		};
+		7FB0F13128F044D20045C472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ido.VaccineCenterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = VaccineCenter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7FB0F0FA28F044D20045C472 /* Build configuration list for PBXProject "VaccineCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FB0F12728F044D20045C472 /* Debug */,
+				7FB0F12828F044D20045C472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FB0F12928F044D20045C472 /* Build configuration list for PBXNativeTarget "VaccineCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FB0F12A28F044D20045C472 /* Debug */,
+				7FB0F12B28F044D20045C472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FB0F12C28F044D20045C472 /* Build configuration list for PBXNativeTarget "VaccineCenterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FB0F12D28F044D20045C472 /* Debug */,
+				7FB0F12E28F044D20045C472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7FB0F12F28F044D20045C472 /* Build configuration list for PBXNativeTarget "VaccineCenterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7FB0F13028F044D20045C472 /* Debug */,
+				7FB0F13128F044D20045C472 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7FB0F13928F0492F0045C472 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7FB0F14E28F04A0D0045C472 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7FB0F13A28F0492F0045C472 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FB0F13928F0492F0045C472 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		7FB0F14F28F04A0D0045C472 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FB0F14E28F04A0D0045C472 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7FB0F15128F04A0D0045C472 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FB0F14E28F04A0D0045C472 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		7FB0F15328F04A0D0045C472 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FB0F14E28F04A0D0045C472 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7FB0F0F728F044D20045C472 /* Project object */;
+}
