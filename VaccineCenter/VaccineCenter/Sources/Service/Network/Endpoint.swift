@@ -16,7 +16,7 @@ enum HTTPMethodType: String {
 }
 
 
-struct Endpoint<T>: Requestable {
+struct Endpoint<T>: ResponseRequestable {
     typealias Response = T
     
     var path: String

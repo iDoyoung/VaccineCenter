@@ -25,6 +25,8 @@
 		7FB0F15F28F147050045C472 /* NetworkAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F15E28F147050045C472 /* NetworkAPIConfiguration.swift */; };
 		7FB0F16128F160C80045C472 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F16028F160C80045C472 /* Endpoint.swift */; };
 		7FB0F16328F167270045C472 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F16228F167270045C472 /* RequestProtocol.swift */; };
+		7FB0F16728F18DB80045C472 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F16628F18DB80045C472 /* NetworkService.swift */; };
+		7FB0F16B28F1AA250045C472 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F16A28F1AA250045C472 /* NetworkServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		7FB0F15E28F147050045C472 /* NetworkAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIConfiguration.swift; sourceTree = "<group>"; };
 		7FB0F16028F160C80045C472 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		7FB0F16228F167270045C472 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
+		7FB0F16628F18DB80045C472 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7FB0F16A28F1AA250045C472 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB0F11928F044D20045C472 /* VaccineCenterTests.swift */,
+				7FB0F16A28F1AA250045C472 /* NetworkServiceTests.swift */,
 			);
 			path = VaccineCenterTests;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 				7FB0F15E28F147050045C472 /* NetworkAPIConfiguration.swift */,
 				7FB0F16028F160C80045C472 /* Endpoint.swift */,
 				7FB0F16228F167270045C472 /* RequestProtocol.swift */,
+				7FB0F16628F18DB80045C472 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB0F16728F18DB80045C472 /* NetworkService.swift in Sources */,
 				7FB0F16328F167270045C472 /* RequestProtocol.swift in Sources */,
 				7FB0F15728F10BCB0045C472 /* UIView+SafeArea.swift in Sources */,
 				7FB0F15C28F1434D0045C472 /* DetailVaccineCenterViewController.swift in Sources */,
@@ -386,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB0F16B28F1AA250045C472 /* NetworkServiceTests.swift in Sources */,
 				7FB0F11A28F044D20045C472 /* VaccineCenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

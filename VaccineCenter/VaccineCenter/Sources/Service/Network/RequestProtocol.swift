@@ -11,9 +11,11 @@ enum RequestGenerationError: Error {
     case components
 }
 
-protocol Requestable {
+protocol ResponseRequestable: Requestable {
     associatedtype Response
-    
+}
+
+protocol Requestable {
     var path: String { get }
     var isFullPath: Bool { get }
     var method: HTTPMethodType { get }
