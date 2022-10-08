@@ -16,7 +16,7 @@ protocol Requestable {
     
     var path: String { get }
     var isFullPath: Bool { get }
-    var method: HttpMethodType { get }
+    var method: HTTPMethodType { get }
     var headerParameters: [String: String] { get }
     var queryParameters: [String: String] { get }
     var bodyParameters: [String: Any] { get }
