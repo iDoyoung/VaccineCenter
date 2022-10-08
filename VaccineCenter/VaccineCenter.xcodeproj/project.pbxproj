@@ -22,6 +22,9 @@
 		7FB0F15728F10BCB0045C472 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F15628F10BCB0045C472 /* UIView+SafeArea.swift */; };
 		7FB0F15928F131E70045C472 /* VaccineCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F15828F131E70045C472 /* VaccineCenterCell.swift */; };
 		7FB0F15C28F1434D0045C472 /* DetailVaccineCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F15B28F1434D0045C472 /* DetailVaccineCenterViewController.swift */; };
+		7FB0F15F28F147050045C472 /* NetworkAPIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F15E28F147050045C472 /* NetworkAPIConfiguration.swift */; };
+		7FB0F16128F160C80045C472 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F16028F160C80045C472 /* Endpoint.swift */; };
+		7FB0F16328F167270045C472 /* RequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F16228F167270045C472 /* RequestProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		7FB0F15628F10BCB0045C472 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
 		7FB0F15828F131E70045C472 /* VaccineCenterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterCell.swift; sourceTree = "<group>"; };
 		7FB0F15B28F1434D0045C472 /* DetailVaccineCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVaccineCenterViewController.swift; sourceTree = "<group>"; };
+		7FB0F15E28F147050045C472 /* NetworkAPIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPIConfiguration.swift; sourceTree = "<group>"; };
+		7FB0F16028F160C80045C472 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		7FB0F16228F167270045C472 /* RequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 		7FB0F13528F045630045C472 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7FB0F15D28F146DA0045C472 /* Network */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -211,6 +218,16 @@
 				7FB0F15B28F1434D0045C472 /* DetailVaccineCenterViewController.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		7FB0F15D28F146DA0045C472 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F15E28F147050045C472 /* NetworkAPIConfiguration.swift */,
+				7FB0F16028F160C80045C472 /* Endpoint.swift */,
+				7FB0F16228F167270045C472 /* RequestProtocol.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,9 +370,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FB0F16328F167270045C472 /* RequestProtocol.swift in Sources */,
 				7FB0F15728F10BCB0045C472 /* UIView+SafeArea.swift in Sources */,
 				7FB0F15C28F1434D0045C472 /* DetailVaccineCenterViewController.swift in Sources */,
+				7FB0F16128F160C80045C472 /* Endpoint.swift in Sources */,
 				7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */,
+				7FB0F15F28F147050045C472 /* NetworkAPIConfiguration.swift in Sources */,
 				7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */,
 				7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */,
 				7FB0F15928F131E70045C472 /* VaccineCenterCell.swift in Sources */,
