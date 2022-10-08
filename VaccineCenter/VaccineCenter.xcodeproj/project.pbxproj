@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10228F044D20045C472 /* AppDelegate.swift */; };
 		7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10428F044D20045C472 /* SceneDelegate.swift */; };
-		7FB0F10728F044D20045C472 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10628F044D20045C472 /* ViewController.swift */; };
+		7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10628F044D20045C472 /* ListVaccineCenterViewController.swift */; };
 		7FB0F10C28F044D20045C472 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB0F10B28F044D20045C472 /* Assets.xcassets */; };
 		7FB0F10F28F044D20045C472 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB0F10D28F044D20045C472 /* LaunchScreen.storyboard */; };
 		7FB0F11A28F044D20045C472 /* VaccineCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F11928F044D20045C472 /* VaccineCenterTests.swift */; };
@@ -19,6 +19,8 @@
 		7FB0F15028F04A0D0045C472 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F14F28F04A0D0045C472 /* RxCocoa */; };
 		7FB0F15228F04A0D0045C472 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F15128F04A0D0045C472 /* RxRelay */; };
 		7FB0F15428F04A0D0045C472 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F15328F04A0D0045C472 /* RxSwift */; };
+		7FB0F15728F10BCB0045C472 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F15628F10BCB0045C472 /* UIView+SafeArea.swift */; };
+		7FB0F15928F131E70045C472 /* VaccineCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F15828F131E70045C472 /* VaccineCenterCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,7 @@
 		7FB0F0FF28F044D20045C472 /* VaccineCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB0F10228F044D20045C472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB0F10428F044D20045C472 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7FB0F10628F044D20045C472 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7FB0F10628F044D20045C472 /* ListVaccineCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVaccineCenterViewController.swift; sourceTree = "<group>"; };
 		7FB0F10B28F044D20045C472 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FB0F10E28F044D20045C472 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FB0F11028F044D20045C472 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +53,8 @@
 		7FB0F11F28F044D20045C472 /* VaccineCenterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VaccineCenterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB0F12328F044D20045C472 /* VaccineCenterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterUITests.swift; sourceTree = "<group>"; };
 		7FB0F12528F044D20045C472 /* VaccineCenterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7FB0F15628F10BCB0045C472 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
+		7FB0F15828F131E70045C472 /* VaccineCenterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +112,6 @@
 				7FB0F13328F0454C0045C472 /* Sources */,
 				7FB0F13828F0459D0045C472 /* Resource */,
 				7FB0F13228F045440045C472 /* Supportings */,
-				7FB0F10628F044D20045C472 /* ViewController.swift */,
 			);
 			path = VaccineCenter;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 		7FB0F13628F0456A0045C472 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				7FB0F15628F10BCB0045C472 /* UIView+SafeArea.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -176,6 +180,7 @@
 		7FB0F13728F0457D0045C472 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				7FB0F15528F04F390045C472 /* List */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -186,6 +191,15 @@
 				7FB0F10B28F044D20045C472 /* Assets.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		7FB0F15528F04F390045C472 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F10628F044D20045C472 /* ListVaccineCenterViewController.swift */,
+				7FB0F15828F131E70045C472 /* VaccineCenterCell.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,9 +342,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB0F10728F044D20045C472 /* ViewController.swift in Sources */,
+				7FB0F15728F10BCB0045C472 /* UIView+SafeArea.swift in Sources */,
+				7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */,
 				7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */,
 				7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */,
+				7FB0F15928F131E70045C472 /* VaccineCenterCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -482,7 +498,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
