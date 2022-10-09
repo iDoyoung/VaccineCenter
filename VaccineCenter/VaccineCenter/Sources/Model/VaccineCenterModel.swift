@@ -10,6 +10,7 @@ import Foundation
 enum VaccineCenterModel {
     struct Response: Decodable {
         let data: [Center]
+        let totalCount: Int
         
         struct Center: Decodable {
             let id: Int
