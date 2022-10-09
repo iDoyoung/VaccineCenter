@@ -16,6 +16,7 @@ final class ListVaccineCenterViewController: UIViewController {
     //MARK: - UI Components
     let vaccineCenterTableView: UITableView = {
         let tableView = UITableView()
+        tableView.register(VaccineCenterCell.self, forCellReuseIdentifier: VaccineCenterCell.reuseIdenetifier)
         return tableView
     }()
     //MARK: - Life Cycle
