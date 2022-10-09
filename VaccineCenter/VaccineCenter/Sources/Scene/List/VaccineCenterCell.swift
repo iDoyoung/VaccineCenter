@@ -9,11 +9,13 @@ import UIKit
 import SnapKit
 
 final class VaccineCenterCell: UITableViewCell {
+    static let reuseIdenetifier = "VaccineCenterCellReuseIdentifier"
+    var vaccineCenter: VaccineCenterModel.Response.Center?
     lazy var verticalStackView: UIStackView = {
-        let stackView = UIStackView(arrangedSubviews: [configureHorizontalStackView(title: "센터명", content: ""),
-                                                       configureHorizontalStackView(title: "건물명", content: ""),
-                                                       configureHorizontalStackView(title: "주소", content: ""),
-                                                       configureHorizontalStackView(title: "업데이트 시간", content: "")])
+        let stackView = UIStackView(arrangedSubviews: [configureHorizontalStackView(title: "센터명", content: vaccineCenter?.centerName ?? ""),
+                                                       configureHorizontalStackView(title: "건물명", content: vaccineCenter?.facilityName ?? ""),
+                                                       configureHorizontalStackView(title: "주소", content: vaccineCenter?.address ?? ""),
+                                                       configureHorizontalStackView(title: "업데이트 시간", content: vaccineCenter?.updatedAt ?? "")])
         stackView.axis = .vertical
         return stackView
     }()
