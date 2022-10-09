@@ -30,7 +30,7 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
             #endif
             return
         }
-        let networkAPI = NetworkAPIConfiguration(baseURL: baseURL, queryParameters: ["perPage": "10", "serviceKey": ""]) //TODO: - Setup serviceKey in Config
+        let networkAPI = NetworkAPIConfiguration(baseURL: baseURL, headers: [ConfidentialKey.authServiceKey.key: ConfidentialKey.authServiceKey.value], queryParameters: ["perPage": "10"])
         let networkService = NetworkService(configuration: networkAPI)
         service = NetworkDataTransferService(networkService: networkService)
     }

@@ -32,6 +32,7 @@
 		7FB0F17B28F2509A0045C472 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17A28F2509A0045C472 /* APIEndpoint.swift */; };
 		7FB0F17D28F252CE0045C472 /* ListVaccineCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17C28F252CE0045C472 /* ListVaccineCenterViewModel.swift */; };
 		7FB0F18028F25D880045C472 /* ListVaccineCenterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17F28F25D880045C472 /* ListVaccineCenterViewModelTests.swift */; };
+		7FB0F18328F311610045C472 /* ConfidentialKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18228F311610045C472 /* ConfidentialKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		7FB0F17A28F2509A0045C472 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		7FB0F17C28F252CE0045C472 /* ListVaccineCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVaccineCenterViewModel.swift; sourceTree = "<group>"; };
 		7FB0F17F28F25D880045C472 /* ListVaccineCenterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVaccineCenterViewModelTests.swift; sourceTree = "<group>"; };
+		7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfidentialKey.xcconfig; sourceTree = "<group>"; };
+		7FB0F18228F311610045C472 /* ConfidentialKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfidentialKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +165,7 @@
 			children = (
 				7FB0F10D28F044D20045C472 /* LaunchScreen.storyboard */,
 				7FB0F11028F044D20045C472 /* Info.plist */,
+				7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */,
 			);
 			path = Supportings;
 			sourceTree = "<group>";
@@ -199,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB0F15628F10BCB0045C472 /* UIView+SafeArea.swift */,
+				7FB0F18228F311610045C472 /* ConfidentialKey.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 				7FB0F15C28F1434D0045C472 /* DetailVaccineCenterViewController.swift in Sources */,
 				7FB0F16128F160C80045C472 /* Endpoint.swift in Sources */,
 				7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */,
+				7FB0F18328F311610045C472 /* ConfidentialKey.swift in Sources */,
 				7FB0F15F28F147050045C472 /* NetworkAPIConfiguration.swift in Sources */,
 				7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */,
 				7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */,
@@ -472,6 +478,7 @@
 /* Begin XCBuildConfiguration section */
 		7FB0F12728F044D20045C472 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -532,6 +539,7 @@
 		};
 		7FB0F12828F044D20045C472 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
