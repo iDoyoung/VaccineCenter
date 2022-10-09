@@ -45,8 +45,8 @@ final class ListVaccineCenterViewController: UIViewController {
         setupVaccineCenterTableViewLayoutConstraints()
     }
     private func bind(to viewModel: (ListVaccineCenterViewModelInput&ListVaccineCenterViewModelOutput)) {
-        viewModel.centers.bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdenetifier, cellType: VaccineCenterCell.self)) { index, center, cell in
-            cell.vaccineCenter = center
+        viewModel.centers.bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdenetifier, cellType: VaccineCenterCell.self)) { index, item, cell in
+            cell.setupContentLabelText(by: item)
         }
         .disposed(by: disposeBag)
     }
