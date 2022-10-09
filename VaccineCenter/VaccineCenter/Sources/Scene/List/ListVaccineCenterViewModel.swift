@@ -9,9 +9,14 @@ import Foundation
 import RxSwift
 import RxRelay
 
-protocol ListVaccineCenterViewModelInput { }
+protocol ListVaccineCenterViewModelInput {
+    func fetchFirstPage()
+    func fetchNextPage()
+}
 
-protocol ListVaccineCenterViewModelOutput { }
+protocol ListVaccineCenterViewModelOutput {
+    var centers: BehaviorRelay<[VaccineCenterModel.Response.Center]> { get }
+}
 
 final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVaccineCenterViewModelOutput {
     var service: NetworkDataTransferServiceProtocol?
@@ -29,11 +34,9 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
         let networkService = NetworkService(configuration: networkAPI)
         service = NetworkDataTransferService(networkService: networkService)
     }
-    
     private func fetchVaccineCentersData(at page: String) -> Observable<VaccineCenterModel.Response> {
         return service!.reqeust(with: APIEndpoint.getVaccineCenter(page: page))
     }
-        
     //MARK: - Input
     func fetchFirstPage() {
        fetchVaccineCentersData(at: String(page))
@@ -44,7 +47,6 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
                 //TODO: - Setup Error Handler
             }).disposed(by: disposeBag)
     }
-    
     func fetchNextPage() {
         page += 1
         if hasMorePages {
@@ -60,7 +62,6 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
                 }).disposed(by: disposeBag)
         }
     }
-    
     //MARK: - Output
     var centers = BehaviorRelay<[VaccineCenterModel.Response.Center]>(value: [])
     var totalResultCount = 0
