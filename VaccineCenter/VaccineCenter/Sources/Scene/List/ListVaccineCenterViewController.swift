@@ -42,6 +42,7 @@ final class ListVaccineCenterViewController: UIViewController {
     //MARK: - Configure
     private func configureVaccineCenterTableView() {
         view.addSubview(vaccineCenterTableView)
+        vaccineCenterTableView.delegate = self
         setupVaccineCenterTableViewLayoutConstraints()
     }
     private func bind(to viewModel: (ListVaccineCenterViewModelInput&ListVaccineCenterViewModelOutput)) {
@@ -59,6 +60,14 @@ final class ListVaccineCenterViewController: UIViewController {
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(view.safeArea.top)
             make.bottom.equalTo(view.safeArea.bottom)
+        }
+    }
+}
+
+extension ListVaccineCenterViewController: UITableViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if vaccineCenterTableView.contentOffset.y > vaccineCenterTableView.contentSize.height - vaccineCenterTableView.bounds.size.height {
+            //TODO: - Fetch Next
         }
     }
 }
