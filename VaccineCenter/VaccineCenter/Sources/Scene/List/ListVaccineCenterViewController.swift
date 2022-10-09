@@ -67,7 +67,10 @@ final class ListVaccineCenterViewController: UIViewController {
 extension ListVaccineCenterViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if vaccineCenterTableView.contentOffset.y > vaccineCenterTableView.contentSize.height - vaccineCenterTableView.bounds.size.height {
-            //TODO: - Fetch Next
+            guard let viewModel = viewModel else { return }
+            if !viewModel.isLoading {
+                viewModel.fetchNextPage()
+            }
         }
     }
 }
