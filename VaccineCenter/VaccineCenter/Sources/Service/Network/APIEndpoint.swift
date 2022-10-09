@@ -8,7 +8,7 @@
 import Foundation
 
 struct APIEndpoint {
-    static func getVaccineCenter(page: String, perPage: String) -> Endpoint<VaccineCenterModel.Response> {
-        return Endpoint(path: "", method: .get, queryParameters: ["page": page, "perPage": perPage])
+    static func getVaccineCenter(page: String) -> Endpoint<VaccineCenterModel.Response> {
+        return Endpoint(path: "", method: .get, queryParameters: ["page": page])
     }
 }

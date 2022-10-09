@@ -31,6 +31,7 @@
 		7FB0F17928F24FBA0045C472 /* VaccineCenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17828F24FBA0045C472 /* VaccineCenterModel.swift */; };
 		7FB0F17B28F2509A0045C472 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17A28F2509A0045C472 /* APIEndpoint.swift */; };
 		7FB0F17D28F252CE0045C472 /* ListVaccineCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17C28F252CE0045C472 /* ListVaccineCenterViewModel.swift */; };
+		7FB0F18028F25D880045C472 /* ListVaccineCenterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17F28F25D880045C472 /* ListVaccineCenterViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		7FB0F17828F24FBA0045C472 /* VaccineCenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterModel.swift; sourceTree = "<group>"; };
 		7FB0F17A28F2509A0045C472 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		7FB0F17C28F252CE0045C472 /* ListVaccineCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVaccineCenterViewModel.swift; sourceTree = "<group>"; };
+		7FB0F17F28F25D880045C472 /* ListVaccineCenterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVaccineCenterViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		7FB0F11828F044D20045C472 /* VaccineCenterTests */ = {
 			isa = PBXGroup;
 			children = (
+				7FB0F17E28F25D630045C472 /* ViewModels */,
 				7FB0F11928F044D20045C472 /* VaccineCenterTests.swift */,
 				7FB0F16A28F1AA250045C472 /* NetworkServiceTests.swift */,
 			);
@@ -254,6 +257,14 @@
 				7FB0F17828F24FBA0045C472 /* VaccineCenterModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7FB0F17E28F25D630045C472 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F17F28F25D880045C472 /* ListVaccineCenterViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +429,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB0F16B28F1AA250045C472 /* NetworkServiceTests.swift in Sources */,
+				7FB0F18028F25D880045C472 /* ListVaccineCenterViewModelTests.swift in Sources */,
 				7FB0F11A28F044D20045C472 /* VaccineCenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
