@@ -29,6 +29,7 @@
 		7FB0F16B28F1AA250045C472 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F16A28F1AA250045C472 /* NetworkServiceTests.swift */; };
 		7FB0F16D28F1C40E0045C472 /* NetworkDataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F16C28F1C40E0045C472 /* NetworkDataTransferService.swift */; };
 		7FB0F17928F24FBA0045C472 /* VaccineCenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17828F24FBA0045C472 /* VaccineCenterModel.swift */; };
+		7FB0F17B28F2509A0045C472 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17A28F2509A0045C472 /* APIEndpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		7FB0F16A28F1AA250045C472 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		7FB0F16C28F1C40E0045C472 /* NetworkDataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataTransferService.swift; sourceTree = "<group>"; };
 		7FB0F17828F24FBA0045C472 /* VaccineCenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterModel.swift; sourceTree = "<group>"; };
+		7FB0F17A28F2509A0045C472 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 				7FB0F16C28F1C40E0045C472 /* NetworkDataTransferService.swift */,
 				7FB0F16628F18DB80045C472 /* NetworkService.swift */,
 				7FB0F15E28F147050045C472 /* NetworkAPIConfiguration.swift */,
+				7FB0F17A28F2509A0045C472 /* APIEndpoint.swift */,
 				7FB0F16028F160C80045C472 /* Endpoint.swift */,
 				7FB0F16228F167270045C472 /* RequestProtocol.swift */,
 			);
@@ -395,6 +398,7 @@
 				7FB0F17928F24FBA0045C472 /* VaccineCenterModel.swift in Sources */,
 				7FB0F16D28F1C40E0045C472 /* NetworkDataTransferService.swift in Sources */,
 				7FB0F15728F10BCB0045C472 /* UIView+SafeArea.swift in Sources */,
+				7FB0F17B28F2509A0045C472 /* APIEndpoint.swift in Sources */,
 				7FB0F15C28F1434D0045C472 /* DetailVaccineCenterViewController.swift in Sources */,
 				7FB0F16128F160C80045C472 /* Endpoint.swift in Sources */,
 				7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */,
