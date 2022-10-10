@@ -8,9 +8,11 @@
 import UIKit
 import MapKit
 import SnapKit
+import RxSwift
 
 final class CenterLocationViewController: UIViewController {
     let viewModel: CenterLocationViewModelOutput
+    private var disposeBag = DisposeBag()
     private let locationManager = CLLocationManager()
     private let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
     private var currentLocation: CLLocation?
@@ -48,12 +50,21 @@ final class CenterLocationViewController: UIViewController {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        bind(to: viewModel)
     }
     //MARK: - Confiure
     private func configureUIComponents() {
         view.addSubview(showCurrentLocationButton)
         view.addSubview(showVaccineCenterLocationButton)
         setupLayoutConstraints()
+    }
+    private func bind(to viewModel: CenterLocationViewModelOutput) {
+        viewModel.centerLocation.subscribe { [weak self] location in
+            let latitude = CLLocationDegrees(location["latitude"] ?? 0)
+            let longitude = CLLocationDegrees(location["longitude"] ?? 0)
+            self?.markVaccineCenterAnnotaion(coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
+        } onError: { _ in
+        }.disposed(by: disposeBag)
     }
     //MARK: - Setup Layout Const
     private func setupLayoutConstraints() {
@@ -91,11 +102,21 @@ extension CenterLocationViewController: CLLocationManagerDelegate {
             mapView.showsUserLocation = true
         }
     }
-    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error: \(error.localizedDescription)")
     }
 }
 
 extension CenterLocationViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        let vaccineCenterAnnoation = mapView.dequeueReusableAnnotationView(withIdentifier: VaccineCenterAnnotation.reuseIdentifier)
+        return vaccineCenterAnnoation
+    }
+}
+//MARK: - Mark Annotation
+extension CenterLocationViewController {
+    private func markVaccineCenterAnnotaion(coordinate: CLLocationCoordinate2D) {
+        let annotation = VaccineCenterAnnotation(coordinate: coordinate)
+        mapView.addAnnotation(annotation)
+    }
 }

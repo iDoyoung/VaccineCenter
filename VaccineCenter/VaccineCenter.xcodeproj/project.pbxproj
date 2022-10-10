@@ -39,6 +39,7 @@
 		7FB0F18E28F3BFE20045C472 /* CenterLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18D28F3BFE20045C472 /* CenterLocationViewController.swift */; };
 		7FB0F19128F3C5E70045C472 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F19028F3C5E70045C472 /* SnapKit */; };
 		7FB0F19328F3CFD20045C472 /* CenterLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F19228F3CFD20045C472 /* CenterLocationViewModel.swift */; };
+		7FB0F19528F3DB4C0045C472 /* VaccineCenterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F19428F3DB4C0045C472 /* VaccineCenterAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		7FB0F18A28F3ABE90045C472 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
 		7FB0F18D28F3BFE20045C472 /* CenterLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewController.swift; sourceTree = "<group>"; };
 		7FB0F19228F3CFD20045C472 /* CenterLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewModel.swift; sourceTree = "<group>"; };
+		7FB0F19428F3DB4C0045C472 /* VaccineCenterAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +297,7 @@
 			children = (
 				7FB0F18D28F3BFE20045C472 /* CenterLocationViewController.swift */,
 				7FB0F19228F3CFD20045C472 /* CenterLocationViewModel.swift */,
+				7FB0F19428F3DB4C0045C472 /* VaccineCenterAnnotation.swift */,
 			);
 			path = CenterLoaction;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB0F17D28F252CE0045C472 /* ListVaccineCenterViewModel.swift in Sources */,
+				7FB0F19528F3DB4C0045C472 /* VaccineCenterAnnotation.swift in Sources */,
 				7FB0F16728F18DB80045C472 /* NetworkService.swift in Sources */,
 				7FB0F16328F167270045C472 /* RequestProtocol.swift in Sources */,
 				7FB0F18B28F3ABE90045C472 /* UIView+Rounded.swift in Sources */,
