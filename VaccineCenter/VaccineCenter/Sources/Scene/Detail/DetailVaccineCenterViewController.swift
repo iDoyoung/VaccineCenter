@@ -59,8 +59,25 @@ final class DetailVaccineCenterViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         configureUIComponents()
+        bind(to: viewModel)
     }
+    //MARK: Configure
     private func bind(to viewModel: DetailVaccineCenterViewModelOutput) {
+        viewModel.centerName
+            .bind(to: centerNameView.contentLabel.rx.text)
+            .disposed(by: disposeBag)
+        viewModel.buildingName
+            .bind(to: buildingNameView.contentLabel.rx.text)
+            .disposed(by: disposeBag)
+        viewModel.phoneNumber
+            .bind(to: phoneNumberView.contentLabel.rx.text)
+            .disposed(by: disposeBag)
+        viewModel.updateTime
+            .bind(to: updateTimeView.contentLabel.rx.text)
+            .disposed(by: disposeBag)
+        viewModel.address
+            .bind(to: addressView.contentLabel.rx.text)
+            .disposed(by: disposeBag)
     }
     //MARK: - Setup
     private func setupNavigationBar() {
