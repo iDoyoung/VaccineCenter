@@ -14,7 +14,7 @@ final class CenterLocationViewController: UIViewController {
     let viewModel: CenterLocationViewModelOutput
     private var disposeBag = DisposeBag()
     private let locationManager = CLLocationManager()
-    private let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
+    private let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
     private var currentLocation: CLLocation?
     private var vaccintCenterLocation: CLLocationCoordinate2D?
     //MARK: - UI Components
@@ -59,6 +59,7 @@ final class CenterLocationViewController: UIViewController {
         view.addSubview(showCurrentLocationButton)
         view.addSubview(showVaccineCenterLocationButton)
         setupLayoutConstraints()
+        setupNavigationBar()
     }
     private func bind(to viewModel: CenterLocationViewModelOutput) {
         viewModel.centerLocation.subscribe { [weak self] location in
@@ -75,6 +76,9 @@ final class CenterLocationViewController: UIViewController {
         }.disposed(by: disposeBag)
     }
     //MARK: - Setup Layout Const
+    private func setupNavigationBar() {
+        title = "지도"
+    }
     private func setupLayoutConstraints() {
         mapView.delegate = self
         showCurrentLocationButton.snp.makeConstraints { make in
