@@ -16,6 +16,7 @@ final class CenterLocationViewController: UIViewController {
     private let locationManager = CLLocationManager()
     private let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
     private var currentLocation: CLLocation?
+    private var vaccintCenterLocation: CLLocationCoordinate2D?
     //MARK: - UI Components
     private let mapView = MKMapView()
     private lazy var showCurrentLocationButton: UIButton = {
@@ -30,6 +31,7 @@ final class CenterLocationViewController: UIViewController {
         let button = UIButton()
         button.setTitle("접종센터로", for: .normal)
         button.backgroundColor = .systemRed
+        button.addTarget(self, action: #selector(showVaccineCenterLocation), for: .touchUpInside)
         button.rounded(5)
         return button
     }()
@@ -46,11 +48,11 @@ final class CenterLocationViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        bind(to: viewModel)
         configureUIComponents()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
-        bind(to: viewModel)
     }
     //MARK: - Confiure
     private func configureUIComponents() {
@@ -60,10 +62,16 @@ final class CenterLocationViewController: UIViewController {
     }
     private func bind(to viewModel: CenterLocationViewModelOutput) {
         viewModel.centerLocation.subscribe { [weak self] location in
+            guard let self = self else { return }
             let latitude = CLLocationDegrees(location["latitude"] ?? 0)
             let longitude = CLLocationDegrees(location["longitude"] ?? 0)
-            self?.markVaccineCenterAnnotaion(coordinate: CLLocationCoordinate2D(latitude: latitude, longitude: longitude))
-        } onError: { _ in
+            self.vaccintCenterLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            guard let coodinate = self.vaccintCenterLocation else { return }
+            self.markVaccineCenterAnnotaion(coordinate: coodinate)
+        } onError: { error in
+            #if DEBUG
+            print("Binding Error: \(error)")
+            #endif
         }.disposed(by: disposeBag)
     }
     //MARK: - Setup Layout Const
@@ -90,7 +98,12 @@ final class CenterLocationViewController: UIViewController {
         }
         let coordinate = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude,
                                                longitude: currentLocation.coordinate.longitude)
-        mapView.setRegion(MKCoordinateRegion(center: coordinate,span: span), animated: true)
+        mapView.setRegion(MKCoordinateRegion(center: coordinate, span: span), animated: true)
+    }
+    @objc
+    private func showVaccineCenterLocation() {
+        guard let vaccintCenterLocation = vaccintCenterLocation else { return }
+        mapView.setRegion(MKCoordinateRegion(center: vaccintCenterLocation, span: span), animated: true)
     }
 }
 
@@ -118,5 +131,6 @@ extension CenterLocationViewController {
     private func markVaccineCenterAnnotaion(coordinate: CLLocationCoordinate2D) {
         let annotation = VaccineCenterAnnotation(coordinate: coordinate)
         mapView.addAnnotation(annotation)
+        showVaccineCenterLocation()
     }
 }
