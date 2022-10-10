@@ -15,7 +15,6 @@
 		7FB0F11A28F044D20045C472 /* VaccineCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F11928F044D20045C472 /* VaccineCenterTests.swift */; };
 		7FB0F12428F044D20045C472 /* VaccineCenterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F12328F044D20045C472 /* VaccineCenterUITests.swift */; };
 		7FB0F12628F044D20045C472 /* VaccineCenterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F12528F044D20045C472 /* VaccineCenterUITestsLaunchTests.swift */; };
-		7FB0F13B28F0492F0045C472 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F13A28F0492F0045C472 /* SnapKit-Dynamic */; };
 		7FB0F15028F04A0D0045C472 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F14F28F04A0D0045C472 /* RxCocoa */; };
 		7FB0F15228F04A0D0045C472 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F15128F04A0D0045C472 /* RxRelay */; };
 		7FB0F15428F04A0D0045C472 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F15328F04A0D0045C472 /* RxSwift */; };
@@ -37,6 +36,8 @@
 		7FB0F18728F32B3F0045C472 /* VaccineCenterContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18628F32B3E0045C472 /* VaccineCenterContentView.swift */; };
 		7FB0F18928F3ABD80045C472 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18828F3ABD80045C472 /* UIView+Shadow.swift */; };
 		7FB0F18B28F3ABE90045C472 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18A28F3ABE90045C472 /* UIView+Rounded.swift */; };
+		7FB0F18E28F3BFE20045C472 /* CenterLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18D28F3BFE20045C472 /* CenterLocationViewController.swift */; };
+		7FB0F19128F3C5E70045C472 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 7FB0F19028F3C5E70045C472 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		7FB0F18628F32B3E0045C472 /* VaccineCenterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterContentView.swift; sourceTree = "<group>"; };
 		7FB0F18828F3ABD80045C472 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		7FB0F18A28F3ABE90045C472 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
+		7FB0F18D28F3BFE20045C472 /* CenterLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,9 +98,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FB0F15228F04A0D0045C472 /* RxRelay in Frameworks */,
+				7FB0F19128F3C5E70045C472 /* SnapKit in Frameworks */,
 				7FB0F15028F04A0D0045C472 /* RxCocoa in Frameworks */,
 				7FB0F15428F04A0D0045C472 /* RxSwift in Frameworks */,
-				7FB0F13B28F0492F0045C472 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +128,7 @@
 				7FB0F11828F044D20045C472 /* VaccineCenterTests */,
 				7FB0F12228F044D20045C472 /* VaccineCenterUITests */,
 				7FB0F10028F044D20045C472 /* Products */,
+				7FB0F18F28F3C5E70045C472 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +226,7 @@
 			children = (
 				7FB0F15528F04F390045C472 /* List */,
 				7FB0F15A28F143160045C472 /* Detail */,
+				7FB0F18C28F3BF920045C472 /* CenterLoaction */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -284,6 +288,21 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		7FB0F18C28F3BF920045C472 /* CenterLoaction */ = {
+			isa = PBXGroup;
+			children = (
+				7FB0F18D28F3BFE20045C472 /* CenterLocationViewController.swift */,
+			);
+			path = CenterLoaction;
+			sourceTree = "<group>";
+		};
+		7FB0F18F28F3C5E70045C472 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -301,10 +320,10 @@
 			);
 			name = VaccineCenter;
 			packageProductDependencies = (
-				7FB0F13A28F0492F0045C472 /* SnapKit-Dynamic */,
 				7FB0F14F28F04A0D0045C472 /* RxCocoa */,
 				7FB0F15128F04A0D0045C472 /* RxRelay */,
 				7FB0F15328F04A0D0045C472 /* RxSwift */,
+				7FB0F19028F3C5E70045C472 /* SnapKit */,
 			);
 			productName = VaccineCenter;
 			productReference = 7FB0F0FF28F044D20045C472 /* VaccineCenter.app */;
@@ -430,6 +449,7 @@
 				7FB0F18B28F3ABE90045C472 /* UIView+Rounded.swift in Sources */,
 				7FB0F17928F24FBA0045C472 /* VaccineCenterModel.swift in Sources */,
 				7FB0F16D28F1C40E0045C472 /* NetworkDataTransferService.swift in Sources */,
+				7FB0F18E28F3BFE20045C472 /* CenterLocationViewController.swift in Sources */,
 				7FB0F15728F10BCB0045C472 /* UIView+SafeArea.swift in Sources */,
 				7FB0F17B28F2509A0045C472 /* APIEndpoint.swift in Sources */,
 				7FB0F15C28F1434D0045C472 /* DetailVaccineCenterViewController.swift in Sources */,
@@ -618,9 +638,9 @@
 				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VaccineCenter/Supportings/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -646,9 +666,9 @@
 				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VaccineCenter/Supportings/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -801,11 +821,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7FB0F13A28F0492F0045C472 /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7FB0F13928F0492F0045C472 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
 		7FB0F14F28F04A0D0045C472 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7FB0F14E28F04A0D0045C472 /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -820,6 +835,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7FB0F14E28F04A0D0045C472 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		7FB0F19028F3C5E70045C472 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FB0F13928F0492F0045C472 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
