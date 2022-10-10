@@ -19,6 +19,7 @@ final class CenterLocationViewController: UIViewController {
         let button = UIButton()
         button.setTitle("현재위치로", for: .normal)
         button.backgroundColor = .systemBlue
+        button.addTarget(self, action: #selector(showCurrentLoacation), for: .touchUpInside)
         button.rounded(5)
         return button
     }()
@@ -41,13 +42,13 @@ final class CenterLocationViewController: UIViewController {
         locationManager.requestLocation()
     }
     //MARK: - Confiure
-    func configureUIComponents() {
+    private func configureUIComponents() {
         view.addSubview(showCurrentLocationButton)
         view.addSubview(showVaccineCenterLocationButton)
         setupLayoutConstraints()
     }
     //MARK: - Setup Layout Const
-    func setupLayoutConstraints() {
+    private func setupLayoutConstraints() {
         mapView.delegate = self
         showCurrentLocationButton.snp.makeConstraints { make in
             make.height.equalTo(60)
@@ -61,6 +62,16 @@ final class CenterLocationViewController: UIViewController {
             make.trailing.equalToSuperview().offset(-16)
             make.bottom.equalTo(view.safeArea.bottom).offset(-40)
         }
+    }
+    //MARK: Actions
+    @objc
+    private func showCurrentLoacation() {
+        guard let currentLocation = currentLocation else {
+            return
+        }
+        let coordinate = CLLocationCoordinate2D(latitude: currentLocation.coordinate.latitude,
+                                               longitude: currentLocation.coordinate.longitude)
+        mapView.setRegion(MKCoordinateRegion(center: coordinate,span: span), animated: true)
     }
 }
 
