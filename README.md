@@ -8,7 +8,7 @@
 - Design Architecture: MVVM
 - 22.10.7 ~ 22.10.10
 
-#### 인증키는 보안상 xcconfig로 작성하여 Git Ignore 시켰습니다.
+#### 인증키는 보안상 Github에 올리면 안될거 같아, xcconfig로 작성하여 Git Ignore 시켰습니다.
 클론 후 실행할 시, VaccineCenter/Sources/Util/ConfidentialKey.swift 19번 라인 다음 코드 추가부탁드립니다.
 
 ```swift
