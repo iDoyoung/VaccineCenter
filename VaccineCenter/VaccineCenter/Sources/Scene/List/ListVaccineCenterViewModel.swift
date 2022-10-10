@@ -23,7 +23,7 @@ protocol ListVaccineCenterViewModelOutput {
 final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVaccineCenterViewModelOutput {
     var service: NetworkDataTransferServiceProtocol?
     private var disposeBag = DisposeBag()
-    var hasMorePages: Bool { 0 < (totalResultCount - (page*10)) }
+    private var hasMorePages: Bool { 0 < (totalResultCount - (page*10)) }
     var isLoading = false
     
     init() {
@@ -73,7 +73,6 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
     //MARK: - Output
     var fetchingError = BehaviorSubject<DataTransferError?>(value: nil)
     var centers = BehaviorRelay<[VaccineCenterModel.Response.Center]>(value: [])
-    var totalResultCount = 0
-    var page = 1
-    var vaccineCenter = [VaccineCenterModel.Response.Center]()
+    private var totalResultCount = 0
+    private var page = 1
 }

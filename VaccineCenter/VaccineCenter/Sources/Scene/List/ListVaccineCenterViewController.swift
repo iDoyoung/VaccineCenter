@@ -14,12 +14,12 @@ final class ListVaccineCenterViewController: UIViewController {
     private var disposeBag = DisposeBag()
     var viewModel: (ListVaccineCenterViewModelInput & ListVaccineCenterViewModelOutput)?
     //MARK: - UI Components
-    let vaccineCenterTableView: UITableView = {
+    private let vaccineCenterTableView: UITableView = {
         let tableView = UITableView()
         tableView.register(VaccineCenterCell.self, forCellReuseIdentifier: VaccineCenterCell.reuseIdenetifier)
         return tableView
     }()
-    lazy var scollToTopButton: UIButton = {
+    private lazy var scollToTopButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBackground
         button.addTarget(self, action: #selector(scrollToTop), for: .touchUpInside)
