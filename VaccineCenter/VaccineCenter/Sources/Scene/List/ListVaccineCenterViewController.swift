@@ -61,6 +61,23 @@ final class ListVaccineCenterViewController: UIViewController {
             cell.setupContentLabelText(by: item)
         }
         .disposed(by: disposeBag)
+        viewModel.fetchingError
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] error in
+                switch error {
+                case .networkFailure(let error):
+                    switch error {
+                    case .notConnectedInternet:
+                        self?.internetConnectErrorAlert()
+                    case .timeOut:
+                        print("")
+                    default :
+                        print("Print")
+                    }
+                default:
+                    print("Error")
+                }
+            }).disposed(by: disposeBag)
     }
     //MARK: - Setup
     private func setupNavigationBar() {
@@ -103,5 +120,27 @@ extension ListVaccineCenterViewController: UITableViewDelegate {
                 viewModel.fetchNextPage()
             }
         }
+    }
+}
+
+//MARK: - Error Alert
+extension ListVaccineCenterViewController {
+    private func programErrorAlert() {
+        present(configureAlert("프로그램 오류"), animated: true)
+    }
+    private func timeOutErrorAlert() {
+        present(configureAlert("요청 시간을 초과하였습니다."), animated: true)
+    }
+    private func internetConnectErrorAlert() {
+        present(configureAlert("인터넷이 연결되어 있지 않습니다."), animated: true)
+    }
+    private func serverErrorAlert() {
+        present(configureAlert("죄송합니다. 현재 서버 점검 중입니다."), animated: true)
+    }
+    private func configureAlert(_ title: String) -> UIAlertController {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "확인", style: .cancel)
+        alert.addAction(action)
+        return alert
     }
 }

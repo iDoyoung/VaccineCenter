@@ -36,7 +36,7 @@ final class NetworkDataTransferService: NetworkDataTransferServiceProtocol {
                     case .success(let data):
                         observer.onNext(data)
                     case .failure(let error):
-                        observer.onError(error)
+                        observer.onError(DataTransferError.networkFailure(error))
                     }
                 }
             }
@@ -46,7 +46,7 @@ final class NetworkDataTransferService: NetworkDataTransferServiceProtocol {
                 let result: T = try self.decode(data: data)
                 return result
             } catch let error {
-                throw error
+                throw DataTransferError.parsing(error)
             }
         }
     }

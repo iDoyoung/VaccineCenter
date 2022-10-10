@@ -16,6 +16,7 @@ protocol ListVaccineCenterViewModelInput {
 }
 
 protocol ListVaccineCenterViewModelOutput {
+    var fetchingError: BehaviorSubject<DataTransferError?> { get }
     var centers: BehaviorRelay<[VaccineCenterModel.Response.Center]> { get }
 }
 
@@ -48,7 +49,7 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
                 self?.totalResultCount = response.totalCount
                 self?.isLoading = false
             }, onError: { [weak self] error in
-                //TODO: - Setup Error Handler
+                self?.fetchingError.onNext(error as? DataTransferError)
                 self?.isLoading = false
             }).disposed(by: disposeBag)
     }
@@ -70,6 +71,7 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
         }
     }
     //MARK: - Output
+    var fetchingError = BehaviorSubject<DataTransferError?>(value: nil)
     var centers = BehaviorRelay<[VaccineCenterModel.Response.Center]>(value: [])
     var totalResultCount = 0
     var page = 1
