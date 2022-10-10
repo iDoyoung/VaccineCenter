@@ -19,6 +19,16 @@ final class ListVaccineCenterViewController: UIViewController {
         tableView.register(VaccineCenterCell.self, forCellReuseIdentifier: VaccineCenterCell.reuseIdenetifier)
         return tableView
     }()
+    lazy var scollToTopButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemBackground
+        button.addTarget(self, action: #selector(scrollToTop), for: .touchUpInside)
+        button.setImage(UIImage(named: "top-alignment"), for: .normal)
+        button.tintColor = .label
+        button.rounded(25)
+        button.shadow()
+        return button
+    }()
     //MARK: - Life Cycle
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -34,16 +44,17 @@ final class ListVaccineCenterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        configureVaccineCenterTableView()
+        configureUIComponents()
         guard let viewModel = viewModel else { return }
         viewModel.fetchFirstPage()
         bind(to: viewModel)
     }
     //MARK: - Configure
-    private func configureVaccineCenterTableView() {
+    private func configureUIComponents() {
         view.addSubview(vaccineCenterTableView)
+        view.addSubview(scollToTopButton)
         vaccineCenterTableView.delegate = self
-        setupVaccineCenterTableViewLayoutConstraints()
+        setupLayoutConstraints()
     }
     private func bind(to viewModel: (ListVaccineCenterViewModelInput&ListVaccineCenterViewModelOutput)) {
         viewModel.centers.bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdenetifier, cellType: VaccineCenterCell.self)) { index, item, cell in
@@ -55,12 +66,24 @@ final class ListVaccineCenterViewController: UIViewController {
     private func setupNavigationBar() {
         title = "예방접종센터 리스트"
     }
-    private func setupVaccineCenterTableViewLayoutConstraints() {
+    private func setupLayoutConstraints() {
         vaccineCenterTableView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()
             make.top.equalTo(view.safeArea.top)
             make.bottom.equalTo(view.safeArea.bottom)
         }
+        scollToTopButton.snp.makeConstraints { make in
+            make.height.equalTo(50)
+            make.width.equalTo(50)
+            make.bottom.equalTo(view.safeArea.bottom).offset(-40)
+            make.trailing.equalTo(view.safeArea.trailing).offset(-40)
+        }
+    }
+    //MARK: - Action
+    @objc
+    private func scrollToTop() {
+        let indexPath = IndexPath(row: 0, section: 0)
+        vaccineCenterTableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 }
 
