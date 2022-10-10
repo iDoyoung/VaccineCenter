@@ -11,7 +11,7 @@ import RxCocoa
 
 final class DetailVaccineCenterViewController: UIViewController {
     private var disposeBag = DisposeBag()
-    let viewModel: DetailVaccineCenterViewModelOutput? = nil
+    let viewModel: DetailVaccineCenterViewModelOutput
     //MARK: - UI Properties
     private let centerNameView: VaccineCenterContentView = {
         let view = VaccineCenterContentView()
@@ -44,6 +44,13 @@ final class DetailVaccineCenterViewController: UIViewController {
         return view
     }()
     //MARK: - Life Cycle
+    init(viewModel: DetailVaccineCenterViewModelOutput) {
+            self.viewModel = viewModel
+            super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func loadView() {
         view = UIView()
         view.backgroundColor = .secondarySystemBackground

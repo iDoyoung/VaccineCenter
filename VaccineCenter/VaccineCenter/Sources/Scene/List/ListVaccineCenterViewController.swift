@@ -65,6 +65,14 @@ final class ListVaccineCenterViewController: UIViewController {
 }
 
 extension ListVaccineCenterViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let viewModel = viewModel else { return }
+        let selected = viewModel.centers.value[indexPath.row]
+        let destinationViewModel = DetailVaccineCenterViewModel(selected)
+        let destination = DetailVaccineCenterViewController(viewModel: destinationViewModel)
+        navigationController?.pushViewController(destination, animated: true)
+    }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if vaccineCenterTableView.contentOffset.y > vaccineCenterTableView.contentSize.height - vaccineCenterTableView.bounds.size.height {
             guard let viewModel = viewModel else { return }
