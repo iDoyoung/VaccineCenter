@@ -37,8 +37,8 @@ class VaccineCenterContentView: UIView {
         configure()
     }
     private func configure() {
-        self.shadow()
         self.rounded(10)
+        self.shadow()
         backgroundColor = .systemBackground
         addSubview(imageView)
         addSubview(titleLabel)
