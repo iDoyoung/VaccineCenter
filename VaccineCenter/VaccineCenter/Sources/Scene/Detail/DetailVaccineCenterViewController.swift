@@ -64,8 +64,12 @@ final class DetailVaccineCenterViewController: UIViewController {
     //MARK: Configure
     private func bind(to viewModel: DetailVaccineCenterViewModelOutput) {
         viewModel.centerName
-            .bind(to: centerNameView.contentLabel.rx.text)
+            .subscribe(onNext: { [weak self] centerName in
+                self?.title = centerName
+                self?.centerNameView.contentLabel.text = centerName
+            })
             .disposed(by: disposeBag)
+        
         viewModel.buildingName
             .bind(to: buildingNameView.contentLabel.rx.text)
             .disposed(by: disposeBag)
