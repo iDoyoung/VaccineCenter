@@ -57,7 +57,9 @@ final class ListVaccineCenterViewController: UIViewController {
         setupLayoutConstraints()
     }
     private func bind(to viewModel: (ListVaccineCenterViewModelInput&ListVaccineCenterViewModelOutput)) {
-        viewModel.centers.bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdenetifier, cellType: VaccineCenterCell.self)) { index, item, cell in
+        viewModel.centers
+            .map { centers in centers.sorted(by: {$0.updatedAt > $1.updatedAt}) }
+            .bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdenetifier, cellType: VaccineCenterCell.self)) { index, item, cell in
             cell.setupContentLabelText(by: item)
         }
         .disposed(by: disposeBag)
