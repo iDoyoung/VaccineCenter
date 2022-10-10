@@ -11,7 +11,7 @@ import RxCocoa
 
 final class DetailVaccineCenterViewController: UIViewController {
     private var disposeBag = DisposeBag()
-    let viewModel: DetailVaccineCenterViewModelOutput
+    let viewModel: (DetailVaccineCenterViewModelInput&DetailVaccineCenterViewModelOutput)
     //MARK: - UI Properties
     private let centerNameView: VaccineCenterContentView = {
         let view = VaccineCenterContentView()
@@ -44,7 +44,7 @@ final class DetailVaccineCenterViewController: UIViewController {
         return view
     }()
     //MARK: - Life Cycle
-    init(viewModel: DetailVaccineCenterViewModelOutput) {
+    init(viewModel: (DetailVaccineCenterViewModelInput&DetailVaccineCenterViewModelOutput)) {
             self.viewModel = viewModel
             super.init(nibName: nil, bundle: nil)
     }
