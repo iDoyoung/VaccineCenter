@@ -8,14 +8,14 @@
 import Foundation
 import RxSwift
 
-protocol DetailVaccineCenterOutput {
+protocol DetailVaccineCenterViewModelOutput {
     var centerName: Observable<String> { get }
     var buildingName: Observable<String> { get }
     var phoneNumber: Observable<String> { get }
     var updateTime: Observable<String> { get }
     var address: Observable<String> { get }
 }
-final class DetailVaccineCenterViewModel: DetailVaccineCenterOutput {
+final class DetailVaccineCenterViewModel: DetailVaccineCenterViewModelOutput {
     init(_ selectedCenter: VaccineCenterModel.Response.Center) {
         let center = Observable.just(selectedCenter)
         centerName = center.map { $0.centerName }

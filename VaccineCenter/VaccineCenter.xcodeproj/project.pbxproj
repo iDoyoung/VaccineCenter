@@ -34,6 +34,9 @@
 		7FB0F18028F25D880045C472 /* ListVaccineCenterViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F17F28F25D880045C472 /* ListVaccineCenterViewModelTests.swift */; };
 		7FB0F18328F311610045C472 /* ConfidentialKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18228F311610045C472 /* ConfidentialKey.swift */; };
 		7FB0F18528F31BF90045C472 /* DetailVaccineCenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18428F31BF90045C472 /* DetailVaccineCenterViewModel.swift */; };
+		7FB0F18728F32B3F0045C472 /* VaccineCenterContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18628F32B3E0045C472 /* VaccineCenterContentView.swift */; };
+		7FB0F18928F3ABD80045C472 /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18828F3ABD80045C472 /* UIView+Shadow.swift */; };
+		7FB0F18B28F3ABE90045C472 /* UIView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F18A28F3ABE90045C472 /* UIView+Rounded.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfidentialKey.xcconfig; sourceTree = "<group>"; };
 		7FB0F18228F311610045C472 /* ConfidentialKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfidentialKey.swift; sourceTree = "<group>"; };
 		7FB0F18428F31BF90045C472 /* DetailVaccineCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVaccineCenterViewModel.swift; sourceTree = "<group>"; };
+		7FB0F18628F32B3E0045C472 /* VaccineCenterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterContentView.swift; sourceTree = "<group>"; };
+		7FB0F18828F3ABD80045C472 /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		7FB0F18A28F3ABE90045C472 /* UIView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Rounded.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,8 @@
 			children = (
 				7FB0F15628F10BCB0045C472 /* UIView+SafeArea.swift */,
 				7FB0F18228F311610045C472 /* ConfidentialKey.swift */,
+				7FB0F18828F3ABD80045C472 /* UIView+Shadow.swift */,
+				7FB0F18A28F3ABE90045C472 /* UIView+Rounded.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 			children = (
 				7FB0F15B28F1434D0045C472 /* DetailVaccineCenterViewController.swift */,
 				7FB0F18428F31BF90045C472 /* DetailVaccineCenterViewModel.swift */,
+				7FB0F18628F32B3E0045C472 /* VaccineCenterContentView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -418,11 +427,13 @@
 				7FB0F17D28F252CE0045C472 /* ListVaccineCenterViewModel.swift in Sources */,
 				7FB0F16728F18DB80045C472 /* NetworkService.swift in Sources */,
 				7FB0F16328F167270045C472 /* RequestProtocol.swift in Sources */,
+				7FB0F18B28F3ABE90045C472 /* UIView+Rounded.swift in Sources */,
 				7FB0F17928F24FBA0045C472 /* VaccineCenterModel.swift in Sources */,
 				7FB0F16D28F1C40E0045C472 /* NetworkDataTransferService.swift in Sources */,
 				7FB0F15728F10BCB0045C472 /* UIView+SafeArea.swift in Sources */,
 				7FB0F17B28F2509A0045C472 /* APIEndpoint.swift in Sources */,
 				7FB0F15C28F1434D0045C472 /* DetailVaccineCenterViewController.swift in Sources */,
+				7FB0F18728F32B3F0045C472 /* VaccineCenterContentView.swift in Sources */,
 				7FB0F16128F160C80045C472 /* Endpoint.swift in Sources */,
 				7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */,
 				7FB0F18328F311610045C472 /* ConfidentialKey.swift in Sources */,
@@ -430,6 +441,7 @@
 				7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */,
 				7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */,
 				7FB0F18528F31BF90045C472 /* DetailVaccineCenterViewModel.swift in Sources */,
+				7FB0F18928F3ABD80045C472 /* UIView+Shadow.swift in Sources */,
 				7FB0F15928F131E70045C472 /* VaccineCenterCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
