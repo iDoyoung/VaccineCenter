@@ -96,25 +96,21 @@ final class DetailVaccineCenterViewController: UIViewController {
         centerNameView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalTo(view.snp.centerX).offset(-10)
-            make.width.height.equalTo(centerNameView.snp.width)
             make.top.equalTo(view.safeArea.top).offset(20)
         }
         buildingNameView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.centerX).offset(10)
             make.trailing.equalToSuperview().offset(-20)
-            make.width.height.equalTo(buildingNameView.snp.width)
             make.top.equalTo(view.safeArea.top).offset(20)
         }
         phoneNumberView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalTo(view.snp.centerX).offset(-10)
-            make.width.height.equalTo(phoneNumberView.snp.width)
             make.top.equalTo(centerNameView.snp.bottom).offset(20)
         }
         updateTimeView.snp.makeConstraints { make in
             make.leading.equalTo(view.snp.centerX).offset(10)
             make.trailing.equalToSuperview().offset(-20)
-            make.width.height.equalTo(updateTimeView.snp.width)
             make.top.equalTo(buildingNameView.snp.bottom).offset(20)
         }
         addressView.snp.makeConstraints { make in
