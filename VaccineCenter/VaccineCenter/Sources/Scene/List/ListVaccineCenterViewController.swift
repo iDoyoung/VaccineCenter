@@ -64,18 +64,19 @@ final class ListVaccineCenterViewController: UIViewController {
         viewModel.fetchingError
             .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] error in
+                guard let error = error else { return }
                 switch error {
                 case .networkFailure(let error):
                     switch error {
                     case .notConnectedInternet:
                         self?.internetConnectErrorAlert()
                     case .timeOut:
-                        print("")
-                    default :
-                        print("Print")
+                        self?.timeOutErrorAlert()
+                    default:
+                        self?.serverErrorAlert()
                     }
                 default:
-                    print("Error")
+                    self?.programErrorAlert()
                 }
             }).disposed(by: disposeBag)
     }
