@@ -19,6 +19,8 @@ enum VaccineCenterModel {
             let address: String
             let phoneNumber: String
             let updatedAt: String
+            let lat: String
+            let lng: String
         }
     }
 }

@@ -10,6 +10,7 @@ import MapKit
 import SnapKit
 
 final class CenterLocationViewController: UIViewController {
+    let viewModel: CenterLocationViewModelOutput
     private let locationManager = CLLocationManager()
     private let span = MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005)
     private var currentLocation: CLLocation?
@@ -31,6 +32,13 @@ final class CenterLocationViewController: UIViewController {
         return button
     }()
     //MARK: - Life Cycle
+    init(viewModel: CenterLocationViewModelOutput) {
+            self.viewModel = viewModel
+            super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func loadView() {
         view = mapView
     }

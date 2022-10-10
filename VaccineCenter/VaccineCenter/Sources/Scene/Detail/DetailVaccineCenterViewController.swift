@@ -123,7 +123,8 @@ final class DetailVaccineCenterViewController: UIViewController {
     //MARK: - Action
     @objc
     private func showLocation() {
-        let destination = CenterLocationViewController()
+        let destinationViewModel = CenterLocationViewModel(viewModel.selectedCenter)
+        let destination = CenterLocationViewController(viewModel: destinationViewModel)
         navigationController?.pushViewController(destination, animated: true)
     }
 }
