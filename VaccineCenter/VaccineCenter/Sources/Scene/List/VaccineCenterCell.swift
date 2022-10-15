@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 final class VaccineCenterCell: UITableViewCell {
-    static let reuseIdenetifier = "VaccineCenterCellReuseIdentifier"
+    static let reuseIdentifier = "VaccineCenterCellReuseIdentifier"
     
     private lazy var titleStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [addTitleLabel("센터명"),

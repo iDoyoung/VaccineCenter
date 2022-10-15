@@ -29,14 +29,14 @@ struct Endpoint<T>: ResponseRequestable {
     init(path: String,
          isFullPath: Bool = false,
          method: HTTPMethodType,
-         headerParamaters: [String: String] = [:],
+         headerParameters: [String: String] = [:],
          queryParameters: [String: String] = [:],
-         bodyParamaters: [String: Any] = [:]) {
+         bodyParameters: [String: Any] = [:]) {
         self.path = path
         self.isFullPath = isFullPath
         self.method = method
-        self.headerParameters = headerParamaters
+        self.headerParameters = headerParameters
         self.queryParameters = queryParameters
-        self.bodyParameters = bodyParamaters
+        self.bodyParameters = bodyParameters
     }
 }

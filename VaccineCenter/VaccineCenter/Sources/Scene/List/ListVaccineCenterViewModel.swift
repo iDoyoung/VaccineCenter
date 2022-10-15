@@ -38,7 +38,7 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
         service = NetworkDataTransferService(networkService: networkService)
     }
     private func fetchVaccineCentersData(at page: String) -> Observable<VaccineCenterModel.Response> {
-        return service!.reqeust(with: APIEndpoint.getVaccineCenter(page: page))
+        return service!.request(with: APIEndpoint.getVaccineCenter(page: page))
     }
     //MARK: - Input
     func fetchFirstPage() {

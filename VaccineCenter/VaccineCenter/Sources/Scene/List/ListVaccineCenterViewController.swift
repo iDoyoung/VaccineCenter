@@ -16,10 +16,10 @@ final class ListVaccineCenterViewController: UIViewController {
     //MARK: - UI Components
     private let vaccineCenterTableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(VaccineCenterCell.self, forCellReuseIdentifier: VaccineCenterCell.reuseIdenetifier)
+        tableView.register(VaccineCenterCell.self, forCellReuseIdentifier: VaccineCenterCell.reuseIdentifier)
         return tableView
     }()
-    private lazy var scollToTopButton: UIButton = {
+    private lazy var scrollToTopButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBackground
         button.addTarget(self, action: #selector(scrollToTop), for: .touchUpInside)
@@ -52,14 +52,14 @@ final class ListVaccineCenterViewController: UIViewController {
     //MARK: - Configure
     private func configureUIComponents() {
         view.addSubview(vaccineCenterTableView)
-        view.addSubview(scollToTopButton)
+        view.addSubview(scrollToTopButton)
         vaccineCenterTableView.delegate = self
         setupLayoutConstraints()
     }
     private func bind(to viewModel: (ListVaccineCenterViewModelInput&ListVaccineCenterViewModelOutput)) {
         viewModel.centers
             .map { centers in centers.sorted(by: {$0.updatedAt > $1.updatedAt}) }
-            .bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdenetifier, cellType: VaccineCenterCell.self)) { index, item, cell in
+            .bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdentifier, cellType: VaccineCenterCell.self)) { index, item, cell in
             cell.setupContentLabelText(by: item)
         }
         .disposed(by: disposeBag)
@@ -92,7 +92,7 @@ final class ListVaccineCenterViewController: UIViewController {
             make.top.equalTo(view.safeArea.top)
             make.bottom.equalTo(view.safeArea.bottom)
         }
-        scollToTopButton.snp.makeConstraints { make in
+        scrollToTopButton.snp.makeConstraints { make in
             make.height.equalTo(50)
             make.width.equalTo(50)
             make.bottom.equalTo(view.safeArea.bottom).offset(-40)
