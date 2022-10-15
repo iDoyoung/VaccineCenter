@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F9C280928FAC6FB000E0F28 /* VaccineCenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C280828FAC6FB000E0F28 /* VaccineCenterCoordinator.swift */; };
 		7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10228F044D20045C472 /* AppDelegate.swift */; };
 		7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10428F044D20045C472 /* SceneDelegate.swift */; };
 		7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10628F044D20045C472 /* ListVaccineCenterViewController.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F9C280828FAC6FB000E0F28 /* VaccineCenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterCoordinator.swift; sourceTree = "<group>"; };
 		7FB0F0FF28F044D20045C472 /* VaccineCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB0F10228F044D20045C472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB0F10428F044D20045C472 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F9C280528FAC62B000E0F28 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		7FB0F0F628F044D20045C472 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB0F13428F045560045C472 /* Entry */,
+				7F9C280528FAC62B000E0F28 /* DIContainer */,
 				7FB0F17228F1E11B0045C472 /* Model */,
 				7FB0F13728F0457D0045C472 /* Scene */,
 				7FB0F13528F045630045C472 /* Service */,
@@ -225,6 +235,7 @@
 		7FB0F13728F0457D0045C472 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				7F9C280828FAC6FB000E0F28 /* VaccineCenterCoordinator.swift */,
 				7FB0F15528F04F390045C472 /* List */,
 				7FB0F15A28F143160045C472 /* Detail */,
 				7FB0F18C28F3BF920045C472 /* CenterLoaction */,
@@ -468,6 +479,7 @@
 				7FB0F18528F31BF90045C472 /* DetailVaccineCenterViewModel.swift in Sources */,
 				7FB0F18928F3ABD80045C472 /* UIView+Shadow.swift in Sources */,
 				7FB0F15928F131E70045C472 /* VaccineCenterCell.swift in Sources */,
+				7F9C280928FAC6FB000E0F28 /* VaccineCenterCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
