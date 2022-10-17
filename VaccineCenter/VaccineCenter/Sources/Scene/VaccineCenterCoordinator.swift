@@ -8,7 +8,7 @@
 import UIKit
 
 protocol VaccineCenterCoordinatorDependenciesProtocol {
-    func makeVaccineCenterListViewController() -> ListVaccineCenterViewController
+    func makeListVaccineCenterViewController() -> ListVaccineCenterViewController
     func makeDetailVaccineCenterViewController() -> UIViewController
     func makeCenterLocationViewController() -> UIViewController
 }
@@ -24,7 +24,7 @@ final class VaccineCenterCoordinator {
     }
     
     func start() {
-        let viewController = dependencies.makeVaccineCenterListViewController()
+        let viewController = dependencies.makeListVaccineCenterViewController()
         navigationController?.pushViewController(viewController, animated: true)
     }
     

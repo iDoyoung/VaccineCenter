@@ -26,17 +26,6 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
     private var hasMorePages: Bool { 0 < (totalResultCount - (page*10)) }
     var isLoading = false
     
-    init() {
-        guard let baseURL = URL(string: "https://api.odcloud.kr/api/15077586/v1/centers?") else {
-            #if DEBUG
-            print("URL is nil")
-            #endif
-            return
-        }
-        let networkAPI = NetworkAPIConfiguration(baseURL: baseURL, headers: [ConfidentialKey.authServiceKey.key: ConfidentialKey.authServiceKey.value], queryParameters: ["perPage": "10"])
-        let networkService = NetworkService(configuration: networkAPI)
-        service = NetworkDataTransferService(networkService: networkService)
-    }
     private func fetchVaccineCentersData(at page: String) -> Observable<VaccineCenterModel.Response> {
         return service!.request(with: APIEndpoint.getVaccineCenter(page: page))
     }
