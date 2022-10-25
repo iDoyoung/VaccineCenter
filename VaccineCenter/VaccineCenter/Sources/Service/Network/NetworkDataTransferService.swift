@@ -15,8 +15,8 @@ enum DataTransferError: Error {
 }
 
 protocol NetworkDataTransferServiceProtocol {
-    func reqeust<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Observable<T> where E.Response == T
-    func reqeust<E>(with endpoint: E) -> Observable<Data?> where E: Requestable
+    func request<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Observable<T> where E.Response == T
+    func request<E>(with endpoint: E) -> Observable<Data?> where E: Requestable
 }
 
 final class NetworkDataTransferService: NetworkDataTransferServiceProtocol {
@@ -28,7 +28,7 @@ final class NetworkDataTransferService: NetworkDataTransferServiceProtocol {
         self.networkService = networkService
     }
     
-    func reqeust<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Observable<T> where E.Response == T {
+    func request<T: Decodable, E: ResponseRequestable>(with endpoint: E) -> Observable<T> where E.Response == T {
         return Observable<Data?>.create { [weak self] observer in
             if let self = self {
                 self.networkService.request(endpoint: endpoint) { result in
@@ -51,7 +51,7 @@ final class NetworkDataTransferService: NetworkDataTransferServiceProtocol {
         }
     }
     
-    func reqeust<E>(with endpoint: E) -> Observable<Data?> where E: Requestable {
+    func request<E>(with endpoint: E) -> Observable<Data?> where E: Requestable {
         return Observable<Data?>.create { [weak self] observer in
             self?.networkService.request(endpoint: endpoint) { result in
                 switch result {

@@ -38,24 +38,24 @@ final class NetworkService: NetworkServiceProtocol {
     let sessionDataTask: NetworkSessionDataTaskProtocol
     
     init(configuration: NetworkAPIConfigurable,
-         sessiondatatask: NetworkSessionDataTaskProtocol = NetworkSessionDataTask()) {
+         sessionDatatask: NetworkSessionDataTaskProtocol = NetworkSessionDataTask()) {
         self.configuration = configuration
-        self.sessionDataTask = sessiondatatask
+        self.sessionDataTask = sessionDatatask
     }
     
     func request(endpoint: Requestable, completion: @escaping CompletionHandler) {
         do {
-            let urlReqesut = try endpoint.urlRequest(with: configuration)
-            request(request: urlReqesut, completion: completion)
+            let urlRequest = try endpoint.urlRequest(with: configuration)
+            request(request: urlRequest, completion: completion)
         } catch {
             completion(.failure(.badURL))
         }
     }
     
     private func request(request: URLRequest, completion: @escaping CompletionHandler) {
-        sessionDataTask.request(request) { [weak self] data, response, reqeustError in
+        sessionDataTask.request(request) { [weak self] data, response, requestError in
             guard let self = self else { return }
-            guard let reqeustError = reqeustError else {
+            guard let requestError = requestError else {
                 completion(.success(data))
                 return
             }
@@ -67,7 +67,7 @@ final class NetworkService: NetworkServiceProtocol {
                 print("RESPONSE : \(String(describing: data))")
                 #endif
             } else {
-                error = self.resolve(error: reqeustError)
+                error = self.resolve(error: requestError)
             }
             completion(.failure(error))
         }

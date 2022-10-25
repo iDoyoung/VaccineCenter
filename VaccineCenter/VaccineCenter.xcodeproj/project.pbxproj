@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F9C280928FAC6FB000E0F28 /* VaccineCenterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C280828FAC6FB000E0F28 /* VaccineCenterCoordinator.swift */; };
+		7F9C280B28FAD230000E0F28 /* VaccineCentersSceneDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9C280A28FAD230000E0F28 /* VaccineCentersSceneDIContainer.swift */; };
 		7FB0F10328F044D20045C472 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10228F044D20045C472 /* AppDelegate.swift */; };
 		7FB0F10528F044D20045C472 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10428F044D20045C472 /* SceneDelegate.swift */; };
 		7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB0F10628F044D20045C472 /* ListVaccineCenterViewController.swift */; };
@@ -59,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F9C280828FAC6FB000E0F28 /* VaccineCenterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterCoordinator.swift; sourceTree = "<group>"; };
+		7F9C280A28FAD230000E0F28 /* VaccineCentersSceneDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCentersSceneDIContainer.swift; sourceTree = "<group>"; };
 		7FB0F0FF28F044D20045C472 /* VaccineCenter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VaccineCenter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB0F10228F044D20045C472 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB0F10428F044D20045C472 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F9C280528FAC62B000E0F28 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				7F9C280A28FAD230000E0F28 /* VaccineCentersSceneDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
 		7FB0F0F628F044D20045C472 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				7FB0F13428F045560045C472 /* Entry */,
+				7F9C280528FAC62B000E0F28 /* DIContainer */,
 				7FB0F17228F1E11B0045C472 /* Model */,
 				7FB0F13728F0457D0045C472 /* Scene */,
 				7FB0F13528F045630045C472 /* Service */,
@@ -223,6 +236,7 @@
 		7FB0F13728F0457D0045C472 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				7F9C280828FAC6FB000E0F28 /* VaccineCenterCoordinator.swift */,
 				7FB0F15528F04F390045C472 /* List */,
 				7FB0F15A28F143160045C472 /* Detail */,
 				7FB0F18C28F3BF920045C472 /* CenterLoaction */,
@@ -458,6 +472,7 @@
 				7FB0F15C28F1434D0045C472 /* DetailVaccineCenterViewController.swift in Sources */,
 				7FB0F18728F32B3F0045C472 /* VaccineCenterContentView.swift in Sources */,
 				7FB0F16128F160C80045C472 /* Endpoint.swift in Sources */,
+				7F9C280B28FAD230000E0F28 /* VaccineCentersSceneDIContainer.swift in Sources */,
 				7FB0F10728F044D20045C472 /* ListVaccineCenterViewController.swift in Sources */,
 				7FB0F18328F311610045C472 /* ConfidentialKey.swift in Sources */,
 				7FB0F15F28F147050045C472 /* NetworkAPIConfiguration.swift in Sources */,
@@ -466,6 +481,7 @@
 				7FB0F18528F31BF90045C472 /* DetailVaccineCenterViewModel.swift in Sources */,
 				7FB0F18928F3ABD80045C472 /* UIView+Shadow.swift in Sources */,
 				7FB0F15928F131E70045C472 /* VaccineCenterCell.swift in Sources */,
+				7F9C280928FAC6FB000E0F28 /* VaccineCenterCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +654,8 @@
 				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VaccineCenter/Supportings/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -666,6 +684,8 @@
 				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VaccineCenter/Supportings/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

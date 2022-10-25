@@ -12,14 +12,14 @@ import RxCocoa
 
 final class ListVaccineCenterViewController: UIViewController {
     private var disposeBag = DisposeBag()
-    var viewModel: (ListVaccineCenterViewModelInput & ListVaccineCenterViewModelOutput)?
+    var viewModel: ListVaccineCenterViewModelProtocol?
     //MARK: - UI Components
     private let vaccineCenterTableView: UITableView = {
         let tableView = UITableView()
-        tableView.register(VaccineCenterCell.self, forCellReuseIdentifier: VaccineCenterCell.reuseIdenetifier)
+        tableView.register(VaccineCenterCell.self, forCellReuseIdentifier: VaccineCenterCell.reuseIdentifier)
         return tableView
     }()
-    private lazy var scollToTopButton: UIButton = {
+    private lazy var scrollToTopButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBackground
         button.addTarget(self, action: #selector(scrollToTop), for: .touchUpInside)
@@ -30,13 +30,6 @@ final class ListVaccineCenterViewController: UIViewController {
         return button
     }()
     //MARK: - Life Cycle
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        self.viewModel = ListVaccineCenterViewModel()
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     override func loadView() {
         view = UIView()
         view.backgroundColor = .systemBackground
@@ -52,14 +45,14 @@ final class ListVaccineCenterViewController: UIViewController {
     //MARK: - Configure
     private func configureUIComponents() {
         view.addSubview(vaccineCenterTableView)
-        view.addSubview(scollToTopButton)
+        view.addSubview(scrollToTopButton)
         vaccineCenterTableView.delegate = self
         setupLayoutConstraints()
     }
     private func bind(to viewModel: (ListVaccineCenterViewModelInput&ListVaccineCenterViewModelOutput)) {
         viewModel.centers
             .map { centers in centers.sorted(by: {$0.updatedAt > $1.updatedAt}) }
-            .bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdenetifier, cellType: VaccineCenterCell.self)) { index, item, cell in
+            .bind(to: vaccineCenterTableView.rx.items(cellIdentifier: VaccineCenterCell.reuseIdentifier, cellType: VaccineCenterCell.self)) { index, item, cell in
             cell.setupContentLabelText(by: item)
         }
         .disposed(by: disposeBag)
@@ -92,7 +85,7 @@ final class ListVaccineCenterViewController: UIViewController {
             make.top.equalTo(view.safeArea.top)
             make.bottom.equalTo(view.safeArea.bottom)
         }
-        scollToTopButton.snp.makeConstraints { make in
+        scrollToTopButton.snp.makeConstraints { make in
             make.height.equalTo(50)
             make.width.equalTo(50)
             make.bottom.equalTo(view.safeArea.bottom).offset(-40)
@@ -111,10 +104,7 @@ extension ListVaccineCenterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let viewModel = viewModel else { return }
-        let selected = viewModel.centers.value[indexPath.row]
-        let destinationViewModel = DetailVaccineCenterViewModel(selected)
-        let destination = DetailVaccineCenterViewController(viewModel: destinationViewModel)
-        navigationController?.pushViewController(destination, animated: true)
+        viewModel.didSelectItem(at: indexPath.row)
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if vaccineCenterTableView.contentOffset.y > vaccineCenterTableView.contentSize.height - vaccineCenterTableView.bounds.size.height {

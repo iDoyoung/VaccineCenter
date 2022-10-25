@@ -10,8 +10,9 @@ import RxSwift
 import RxCocoa
 
 final class DetailVaccineCenterViewController: UIViewController {
+    
     private var disposeBag = DisposeBag()
-    let viewModel: (DetailVaccineCenterViewModelInput&DetailVaccineCenterViewModelOutput)
+    var viewModel: DetailVaccineCenterViewModelProtocol?
     //MARK: - UI Properties
     private let centerNameView: VaccineCenterContentView = {
         let view = VaccineCenterContentView()
@@ -19,38 +20,36 @@ final class DetailVaccineCenterViewController: UIViewController {
         view.titleLabel.text = "센터명"
         return view
     }()
+    
     private let buildingNameView: VaccineCenterContentView = {
         let view = VaccineCenterContentView()
         view.imageView.image = UIImage(named: "building")
         view.titleLabel.text = "건물명"
         return view
     }()
+    
     private let phoneNumberView: VaccineCenterContentView = {
         let view = VaccineCenterContentView()
         view.imageView.image = UIImage(named: "telephone")
         view.titleLabel.text = "전화번호"
         return view
     }()
+    
     private let updateTimeView: VaccineCenterContentView = {
         let view = VaccineCenterContentView()
         view.imageView.image = UIImage(named: "chat")
         view.titleLabel.text = "업데이트 시간"
         return view
     }()
+    
     private let addressView: VaccineCenterContentView = {
         let view = VaccineCenterContentView()
         view.imageView.image = UIImage(named: "placeholder")
         view.titleLabel.text = "주소"
         return view
     }()
+    
     //MARK: - Life Cycle
-    init(viewModel: (DetailVaccineCenterViewModelInput&DetailVaccineCenterViewModelOutput)) {
-            self.viewModel = viewModel
-            super.init(nibName: nil, bundle: nil)
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     override func loadView() {
         view = UIView()
         view.backgroundColor = .secondarySystemBackground
@@ -59,6 +58,7 @@ final class DetailVaccineCenterViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         configureUIComponents()
+        guard let viewModel = viewModel else { return }
         bind(to: viewModel)
     }
     //MARK: Configure
@@ -127,8 +127,6 @@ final class DetailVaccineCenterViewController: UIViewController {
     //MARK: - Action
     @objc
     private func showLocation() {
-        let destinationViewModel = CenterLocationViewModel(viewModel.selectedCenter)
-        let destination = CenterLocationViewController(viewModel: destinationViewModel)
-        navigationController?.pushViewController(destination, animated: true)
+        viewModel?.tapNavigationRightButton()
     }
 }

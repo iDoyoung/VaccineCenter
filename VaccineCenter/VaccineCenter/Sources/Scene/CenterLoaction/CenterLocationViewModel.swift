@@ -8,6 +8,8 @@
 import Foundation
 import RxSwift
 
+protocol CenterLocationViewModelProtocol: CenterLocationViewModelInput, CenterLocationViewModelOutput { }
+
 protocol CenterLocationViewModelInput {
     var selectedCenter: VaccineCenterModel.Response.Center { get }
 }
@@ -15,7 +17,7 @@ protocol CenterLocationViewModelOutput {
     var centerLocation: Observable<[String: Float]> { get }
 }
 
-final class CenterLocationViewModel: CenterLocationViewModelInput, CenterLocationViewModelOutput {
+final class CenterLocationViewModel: CenterLocationViewModelProtocol {
     init(_ selectedCenter: VaccineCenterModel.Response.Center) {
         self.selectedCenter = selectedCenter
         centerLocation = Observable
