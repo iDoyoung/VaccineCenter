@@ -87,7 +87,6 @@
 		7FB0F17A28F2509A0045C472 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		7FB0F17C28F252CE0045C472 /* ListVaccineCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVaccineCenterViewModel.swift; sourceTree = "<group>"; };
 		7FB0F17F28F25D880045C472 /* ListVaccineCenterViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVaccineCenterViewModelTests.swift; sourceTree = "<group>"; };
-		7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ConfidentialKey.xcconfig; sourceTree = "<group>"; };
 		7FB0F18228F311610045C472 /* ConfidentialKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfidentialKey.swift; sourceTree = "<group>"; };
 		7FB0F18428F31BF90045C472 /* DetailVaccineCenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVaccineCenterViewModel.swift; sourceTree = "<group>"; };
 		7FB0F18628F32B3E0045C472 /* VaccineCenterContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaccineCenterContentView.swift; sourceTree = "<group>"; };
@@ -189,7 +188,6 @@
 			children = (
 				7FB0F10D28F044D20045C472 /* LaunchScreen.storyboard */,
 				7FB0F11028F044D20045C472 /* Info.plist */,
-				7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */,
 			);
 			path = Supportings;
 			sourceTree = "<group>";
@@ -534,7 +532,6 @@
 /* Begin XCBuildConfiguration section */
 		7FB0F12728F044D20045C472 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -595,7 +592,6 @@
 		};
 		7FB0F12828F044D20045C472 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FB0F18128F30EBE0045C472 /* ConfidentialKey.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
