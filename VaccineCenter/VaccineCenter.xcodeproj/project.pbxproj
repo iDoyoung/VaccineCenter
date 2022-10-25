@@ -658,6 +658,8 @@
 				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VaccineCenter/Supportings/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -686,6 +688,8 @@
 				DEVELOPMENT_TEAM = 3XVAQ6DRC4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VaccineCenter/Supportings/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

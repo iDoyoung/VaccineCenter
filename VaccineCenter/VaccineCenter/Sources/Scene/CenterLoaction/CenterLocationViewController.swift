@@ -11,7 +11,8 @@ import SnapKit
 import RxSwift
 
 final class CenterLocationViewController: UIViewController {
-    let viewModel: CenterLocationViewModelOutput
+    
+    var viewModel: CenterLocationViewModelOutput?
     private var disposeBag = DisposeBag()
     private let locationManager = CLLocationManager()
     private let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
@@ -27,6 +28,7 @@ final class CenterLocationViewController: UIViewController {
         button.rounded(5)
         return button
     }()
+    
     private lazy var showVaccineCenterLocationButton: UIButton = {
         let button = UIButton()
         button.setTitle("접종센터로", for: .normal)
@@ -35,25 +37,22 @@ final class CenterLocationViewController: UIViewController {
         button.rounded(5)
         return button
     }()
+    
     //MARK: - Life Cycle
-    init(viewModel: CenterLocationViewModelOutput) {
-            self.viewModel = viewModel
-            super.init(nibName: nil, bundle: nil)
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
     override func loadView() {
         view = mapView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        bind(to: viewModel)
         configureUIComponents()
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
+        guard let viewModel = viewModel else {  return  }
+        bind(to: viewModel)
     }
+    
     //MARK: - Configure
     private func configureUIComponents() {
         view.addSubview(showCurrentLocationButton)
@@ -61,6 +60,7 @@ final class CenterLocationViewController: UIViewController {
         setupLayoutConstraints()
         setupNavigationBar()
     }
+    
     private func bind(to viewModel: CenterLocationViewModelOutput) {
         viewModel.centerLocation.subscribe { [weak self] location in
             guard let self = self else { return }
@@ -75,10 +75,12 @@ final class CenterLocationViewController: UIViewController {
             #endif
         }.disposed(by: disposeBag)
     }
+    
     //MARK: - Setup Layout Const
     private func setupNavigationBar() {
         title = "지도"
     }
+    
     private func setupLayoutConstraints() {
         mapView.delegate = self
         showCurrentLocationButton.snp.makeConstraints { make in
@@ -94,6 +96,7 @@ final class CenterLocationViewController: UIViewController {
             make.bottom.equalTo(view.safeArea.bottom).offset(-40)
         }
     }
+    
     //MARK: Actions
     @objc
     private func showCurrentLocation() {
@@ -104,6 +107,7 @@ final class CenterLocationViewController: UIViewController {
                                                longitude: currentLocation.coordinate.longitude)
         mapView.setRegion(MKCoordinateRegion(center: coordinate, span: span), animated: true)
     }
+    
     @objc
     private func showVaccineCenterLocation() {
         guard let vaccineCenterLocation = vaccineCenterLocation else { return }

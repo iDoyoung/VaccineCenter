@@ -9,10 +9,13 @@ import Foundation
 import RxSwift
 import RxRelay
 
+protocol ListVaccineCenterViewModelProtocol: ListVaccineCenterViewModelInput, ListVaccineCenterViewModelOutput { }
+
 protocol ListVaccineCenterViewModelInput {
     var isLoading: Bool { get }
     func fetchFirstPage()
     func fetchNextPage()
+    func didSelectItem(at index: Int)
 }
 
 protocol ListVaccineCenterViewModelOutput {
@@ -20,15 +23,24 @@ protocol ListVaccineCenterViewModelOutput {
     var centers: BehaviorRelay<[VaccineCenterModel.Response.Center]> { get }
 }
 
-final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVaccineCenterViewModelOutput {
+final class ListVaccineCenterViewModel: ListVaccineCenterViewModelProtocol {
     var service: NetworkDataTransferServiceProtocol?
+    var segueToDetail: ((VaccineCenterModel.Response.Center) -> Void)
     private var disposeBag = DisposeBag()
     private var hasMorePages: Bool { 0 < (totalResultCount - (page*10)) }
     var isLoading = false
     
     private func fetchVaccineCentersData(at page: String) -> Observable<VaccineCenterModel.Response> {
-        return service!.request(with: APIEndpoint.getVaccineCenter(page: page))
+        guard let service = service else {
+            return Observable.error(NetworkError.badURL)
+        }
+        return service.request(with: APIEndpoint.getVaccineCenter(page: page))
     }
+    
+    init(segueToDetail: @escaping (VaccineCenterModel.Response.Center) -> Void) {
+        self.segueToDetail = segueToDetail
+    }
+    
     //MARK: - Input
     func fetchFirstPage() {
         isLoading = true
@@ -42,6 +54,7 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
                 self?.isLoading = false
             }).disposed(by: disposeBag)
     }
+    
     func fetchNextPage() {
         if hasMorePages {
             page += 1
@@ -58,6 +71,10 @@ final class ListVaccineCenterViewModel: ListVaccineCenterViewModelInput & ListVa
                     self?.isLoading = false
                 }).disposed(by: disposeBag)
         }
+    }
+    
+    func didSelectItem(at index: Int) {
+        segueToDetail(centers.value[index])
     }
     //MARK: - Output
     var fetchingError = BehaviorSubject<DataTransferError?>(value: nil)

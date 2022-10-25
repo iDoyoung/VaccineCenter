@@ -12,7 +12,7 @@ import RxCocoa
 
 final class ListVaccineCenterViewController: UIViewController {
     private var disposeBag = DisposeBag()
-    var viewModel: (ListVaccineCenterViewModelInput & ListVaccineCenterViewModelOutput)?
+    var viewModel: ListVaccineCenterViewModelProtocol?
     //MARK: - UI Components
     private let vaccineCenterTableView: UITableView = {
         let tableView = UITableView()
@@ -104,10 +104,7 @@ extension ListVaccineCenterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let viewModel = viewModel else { return }
-        let selected = viewModel.centers.value[indexPath.row]
-        let destinationViewModel = DetailVaccineCenterViewModel(selected)
-        let destination = DetailVaccineCenterViewController(viewModel: destinationViewModel)
-        navigationController?.pushViewController(destination, animated: true)
+        viewModel.didSelectItem(at: indexPath.row)
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if vaccineCenterTableView.contentOffset.y > vaccineCenterTableView.contentSize.height - vaccineCenterTableView.bounds.size.height {

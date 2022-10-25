@@ -8,9 +8,13 @@
 import UIKit
 
 protocol VaccineCenterCoordinatorDependenciesProtocol {
-    func makeListVaccineCenterViewController() -> ListVaccineCenterViewController
-    func makeDetailVaccineCenterViewController() -> UIViewController
-    func makeCenterLocationViewController() -> UIViewController
+    
+    typealias SegueToDetail = (VaccineCenterModel.Response.Center) -> Void
+    typealias SegueToCenterLoaction = (VaccineCenterModel.Response.Center) -> Void
+    
+    func makeListVaccineCenterViewController(segue: @escaping SegueToDetail) -> ListVaccineCenterViewController
+    func makeDetailVaccineCenterViewController(center: VaccineCenterModel.Response.Center, segue: @escaping SegueToCenterLoaction) -> UIViewController
+    func makeCenterLocationViewController(center: VaccineCenterModel.Response.Center) -> UIViewController
 }
 
 final class VaccineCenterCoordinator {
@@ -24,16 +28,17 @@ final class VaccineCenterCoordinator {
     }
     
     func start() {
-        let viewController = dependencies.makeListVaccineCenterViewController()
+        let viewController = dependencies.makeListVaccineCenterViewController(segue: showDetailVaccineCenter)
+        navigationController?.pushViewController(viewController, animated: false)
+    }
+    
+    private func showDetailVaccineCenter(center: VaccineCenterModel.Response.Center) {
+        let viewController = dependencies.makeDetailVaccineCenterViewController(center: center, segue: showCenterLoaction)
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func showDetailVaccineCenter() {
-        let viewController = dependencies.makeDetailVaccineCenterViewController()
-        navigationController?.pushViewController(viewController, animated: true)
-    }
-    private func showCenterLoaction() {
-        let viewController = dependencies.makeCenterLocationViewController()
+    private func showCenterLoaction(center: VaccineCenterModel.Response.Center) {
+        let viewController = dependencies.makeCenterLocationViewController(center: center)
         navigationController?.pushViewController(viewController, animated: true)
     }
 }
